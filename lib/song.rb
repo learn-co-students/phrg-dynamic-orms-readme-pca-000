@@ -1,8 +1,9 @@
+#string
+
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
 class Song
-
 
   def self.table_name
     self.to_s.downcase.pluralize
@@ -57,8 +58,8 @@ class Song
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
   end
-
 end
+
 
 
 
